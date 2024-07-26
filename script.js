@@ -227,7 +227,7 @@ btnLoan.addEventListener('click', e => {
 
   const amount = Number(inputLoanAmount.value);
 
-  if (amount > 0 && accounts.movements.some(mov => mov >= mov * 0.1)) {
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= mov * 0.1)) {
     currentAccount.movements.push(amount);
     update(currentAccount);
   }
